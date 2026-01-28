@@ -1,6 +1,7 @@
 let prompt=document.querySelector("#prompt")
 let chatcontainer=document.querySelector(".chat-container")
 let imagebtn=document.querySelector("#image")
+let submitbtn =document.querySelector("#submit")
 
 let imageinput=document.querySelector("#image input")
 
@@ -118,3 +119,8 @@ imageinput.addEventListener("change",()=>{
 imagebtn.addEventListener("click",()=>{
   imagebtn.querySelector("input").click()
 })
+
+submitbtn.addEventListener("click",()=>{
+   if(prompt.value.trim()==="")return;
+   handlechatresponse(prompt.value);
+});
